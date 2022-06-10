@@ -1,3 +1,8 @@
+'''
+i don't know exactly why but i think because of filtering this app works when vpn is on
+if vpn is off it will returns a long error message about connection etc.
+'''
+
 # importing some modules
 from PyQt5.QtWidgets import QLineEdit, QApplication, QPushButton, QVBoxLayout, QWidget, QFormLayout, QGroupBox, QScrollArea, QLabel
 from PyQt5.QtGui import QPixmap, QImage, QFont
@@ -6,6 +11,8 @@ import requests
 from bs4 import BeautifulSoup
 
 # defining the main class that inherites from QWidget library
+
+
 class Window(QWidget):
     def __init__(self):
         super().__init__()
@@ -78,7 +85,7 @@ class Window(QWidget):
         img = QImage()
         img.loadFromData(requests.get(url).content)
         return img
-    
+
     # a method that displays the image
     def display_image(self, img):
         img_lable = QLabel()
